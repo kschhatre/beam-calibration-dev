@@ -1,4 +1,4 @@
-# BEAM Calibration: Computational Algorithms for Expensive Optimization
+# BEAM Calibration: Algorithms for Expensive Optimization
 
 This is documentation for [BEAM](http://beam.lbl.gov/ "BEAM's Homepage") calibration development tasks.
 
