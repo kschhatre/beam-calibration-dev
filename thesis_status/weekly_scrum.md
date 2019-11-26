@@ -1,11 +1,11 @@
 # Weekly Scrum
 
-**Invitation**: Rashid Waraich, Colin Sheppard (Lawrence Berkeley National Lab)
-**Optional**: Sid Feygin (Stealth Startup, Berkeley Lab alum)
-**Recurring**: Mondays, 10 am PST
+**Invitation**: Rashid Waraich, Colin Sheppard (Lawrence Berkeley National Lab)  
+**Optional**: Sid Feygin (Stealth Startup, Berkeley Lab alum)  
+**Recurring**: Mondays, 10 am PST  
 
-**University Thesis Supervisor**: Prof. Mikhail Itskov, KM, RWTH Aachen University
-**University Advisor**: Markus Hillgärtner, KM, RWTH Aachen University
+**University Thesis Supervisor**: Prof. Mikhail Itskov, KM, RWTH Aachen University  
+**University Advisor**: Markus Hillgärtner, KM, RWTH Aachen University  
 
 
 ## Week 46

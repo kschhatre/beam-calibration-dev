@@ -1,4 +1,4 @@
-# Thesis Goals and Objectives
+# Thesis: Goals and Objectives
 
 This Master's thesis presents development around BEAM (Behavior, Energy, Autonomy, and Mobility) model. [BEAM](http://beam.lbl.gov/ "BEAM's Homepage") extends the [Multi-Agent Transportation Simulation Framework (MATSim)](http://www.matsim.org/) to enable powerful and scalable analysis of urban transportation systems.
 
