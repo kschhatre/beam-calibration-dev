@@ -23,12 +23,21 @@
 ## Week 48
  
 + Running base setups and comparison between Microsoft Neural Network Intelligence framework/ HyperOpt, raytune framework from RISELab (UC Berkeley)
-+ Getting started with setting up BEAM API for external framework 
-+ TBD
++ *To be started*: Getting started with setting up BEAM API for external framework  
++ *Scrap*: Polynomial regression with grid search
 
 ## Week 49
  
-TBD 
++ [BISTRO paper](http://bistro.its.berkeley.edu/assets/download/pdfs/BISTRO_paper.pdf)
++ Familiarizing oneself with:
+    + [Bayesian optimization](http://krasserm.github.io/2018/03/21/bayesian-optimization/)
+    + [Extrapolation of learning curves](http://aad.informatik.uni-freiburg.de/papers/15-IJCAI-Extrapolation_of_Learning_Curves.pdf)
++ Technical write up of a problem statement on Overleaf (Conceptual understanding, development of ubiquitous language, all relevant objects identification and their labels etc.)
+
++ **Overall goals**:
+    + Develop a test framework for BEAM.
+    + Familiarize oneself with Scala syntax and understand the SigOpt branch.
+    + Get SigOpt simulation running, analyze how convergence is achieved.  
 
 ## Week 50
  
