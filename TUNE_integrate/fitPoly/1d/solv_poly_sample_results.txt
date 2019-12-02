@@ -1,0 +1,72 @@
+(calib) berkeleylab@KiranCHHATRE:~/Calib_documentation/TUNE_integrate/fitPoly/1d$ python solv_poly.py
+solv_poly.py:12: RuntimeWarning: invalid value encountered in double_scalars
+  f[0] = 2.0 * x**(2.0/3.0) + y**(2.0/3.0) - 9.0**(1.0/3.0)
+solv_poly.py:13: RuntimeWarning: invalid value encountered in double_scalars
+  f[1] = x**2/4.0 + y**(0.5) - 1.0
+/home/berkeleylab/anaconda3/envs/calib/lib/python3.7/site-packages/scipy/optimize/minpack.py:162: RuntimeWarning: The iteration is not making good progress, as measured by the
+  improvement from the last ten iterations.
+  warnings.warn(msg, RuntimeWarning)
+Agent  1 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  2 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  3 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  4 did not converge hence aborted.
+Agent  5 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  6 did not converge hence aborted.
+Agent  7 did not converge hence aborted.
+Agent  8 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  9 converged with params  [0.4312398974047245, 0.9091775779996811] .
+Agent  10 converged with params  [0.4312398974047245, 0.9091775779996811] .
+(calib) berkeleylab@KiranCHHATRE:~/Calib_documentation/TUNE_integrate/fitPoly/1d$ python solv_poly.py
+solv_poly.py:12: RuntimeWarning: invalid value encountered in double_scalars
+  f[0] = 2.0 * x**(2.0/3.0) + y**(2.0/3.0) - 9.0**(1.0/3.0)
+solv_poly.py:13: RuntimeWarning: invalid value encountered in double_scalars
+  f[1] = x**2/4.0 + y**(0.5) - 1.0
+/home/berkeleylab/anaconda3/envs/calib/lib/python3.7/site-packages/scipy/optimize/minpack.py:162: RuntimeWarning: The iteration is not making good progress, as measured by the
+  improvement from the last ten iterations.
+  warnings.warn(msg, RuntimeWarning)
+Agent  1 did not converge hence aborted.
+Agent  2 did not converge hence aborted.
+Agent  3 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  4 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  5 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  6 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  7 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  8 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  9 converged with params [0.4312398974047245, 0.9091775779996811] .
+Agent  10 did not converge hence aborted.
+(calib) berkeleylab@KiranCHHATRE:~/Calib_documentation/TUNE_integrate/fitPoly/1d$ python solv_poly.py
+solv_poly.py:12: RuntimeWarning: invalid value encountered in double_scalars
+  f[0] = 2.0 * x**(2.0/3.0) + y**(2.0/3.0) - 9.0**(1.0/3.0)
+solv_poly.py:13: RuntimeWarning: invalid value encountered in double_scalars
+  f[1] = x**2/4.0 + y**(0.5) - 1.0
+/home/berkeleylab/anaconda3/envs/calib/lib/python3.7/site-packages/scipy/optimize/minpack.py:162: RuntimeWarning: The iteration is not making good progress, as measured by the
+  improvement from the last ten iterations.
+  warnings.warn(msg, RuntimeWarning)
+Agent  1 did not converge hence aborted.
+Agent  2 did not converge hence aborted.
+Agent  3 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  4 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  5 did not converge hence aborted.
+Agent  6 did not converge hence aborted.
+Agent  7 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  8 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  9 did not converge hence aborted.
+Agent  10 converged with params [0.4312398974047245, 0.9091775779996811]
+(calib) berkeleylab@KiranCHHATRE:~/Calib_documentation/TUNE_integrate/fitPoly/1d$ python solv_poly.py
+solv_poly.py:12: RuntimeWarning: invalid value encountered in double_scalars
+  f[0] = 2.0 * x**(2.0/3.0) + y**(2.0/3.0) - 9.0**(1.0/3.0)
+solv_poly.py:13: RuntimeWarning: invalid value encountered in double_scalars
+  f[1] = x**2/4.0 + y**(0.5) - 1.0
+/home/berkeleylab/anaconda3/envs/calib/lib/python3.7/site-packages/scipy/optimize/minpack.py:162: RuntimeWarning: The iteration is not making good progress, as measured by the
+  improvement from the last ten iterations.
+  warnings.warn(msg, RuntimeWarning)
+Agent  1 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  2 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  3 did not converge hence aborted.
+Agent  4 did not converge hence aborted.
+Agent  5 converged with params [0.4312398974047245, 0.9091775779996811]
+Agent  6 did not converge hence aborted.
+Agent  7 did not converge hence aborted.
+Agent  8 did not converge hence aborted.
+Agent  9 converged with params [0.4312398974047282, 0.9091775779996758]
+Agent  10 did not converge hence aborted.
