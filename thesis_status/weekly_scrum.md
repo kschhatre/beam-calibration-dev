@@ -41,7 +41,7 @@
 
 ## Week 50
  
-TBD 
++ [Ray](https://github.com/ray-project/ray/tree/master/python/ray/tune) - BEAM interface 
 
 ## Week 51
  
