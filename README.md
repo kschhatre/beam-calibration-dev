@@ -6,7 +6,7 @@ This is development/ documentation for [BEAM](http://beam.lbl.gov/ "BEAM's Homep
 
 ## Credits
  
-Developer - Kiran Chhatre (@kschhatre), Master's student at RWTH Aachen University, Germany
+Developer - Kiran Chhatre ([@kschhatre](https://github.com/kschhatre)), Master's student at RWTH Aachen University, Germany
 
 ## Citations
 
