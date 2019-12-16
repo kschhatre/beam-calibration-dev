@@ -12,6 +12,7 @@ Developer - Kiran Chhatre ([@kschhatre](https://github.com/kschhatre)), Master's
 
 1. The **BEAM Team**, 2019, GitHub Repository, https://github.com/LBNL-UCB-STI/beam 
 2. Liaw, Richard and Liang, Eric and Nishihara, Robert and Moritz, Philipp and Gonzalez, Joseph E and Stoica, Ion, **Tune: A Research Platform for Distributed Model Selection and Training**, 2018
+3. [HpBandSter](https://github.com/automl/HpBandSter)
  
 ## License
 
