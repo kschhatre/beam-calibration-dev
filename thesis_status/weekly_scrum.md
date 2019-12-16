@@ -42,10 +42,12 @@
 ## Week 50
  
 + [Ray](https://github.com/ray-project/ray/tree/master/python/ray/tune) - BEAM interface 
+    + BayesOpt integration 
+    + Early stop (ongoing)
 
 ## Week 51
  
-TBD 
++ Parallel Bayesian Optimization with Early stop (Ongoing)
 
 ## Week 52
  
