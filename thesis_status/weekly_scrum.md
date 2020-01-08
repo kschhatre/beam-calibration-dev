@@ -51,15 +51,15 @@
 
 ## Week 52
  
-TBD 
++ Parallel Bayesian Optimization with Early stop (Ongoing)
 
 ## Week 01
  
-TBD 
++ Out with fever
 
 ## Week 02
  
-TBD 
++ Early week (out with fever), Parallel Bayesian with early stop (ongoing). 
 
 ## Week 03
  
