@@ -85,6 +85,9 @@ class BeamWorker(Worker):
         print(acc)
     
         return({'loss':float(remains),'info':remains})
+
+        # check keras example
+        # add tag for iteration number and check corresponding column inmode choice csv file
     
     
     
