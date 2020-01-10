@@ -60,6 +60,10 @@
 ## Week 02
  
 + Early week (out with fever), Parallel Bayesian with early stop (ongoing). 
+    + run sflight1k for 15 iterations on aws
+    + early stop criteria at 2nd or 3rd iteration by summing the difference and extrapolating the value PER intercept 
+
+    + early stop mechanism within beam iterations for bohb
 
 ## Week 03
  
