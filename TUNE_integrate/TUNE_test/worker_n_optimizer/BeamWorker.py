@@ -80,7 +80,7 @@ class BeamWorker(Worker):
         latest_subdir = max(all_subdirs_of(), key=os.path.getmtime)
         df = pd.read_csv(latest_subdir+"/referenceRealizedModeChoice.csv").iloc[[0, -1]].drop(['iterations'], axis=1)
         acc = (df.iloc[0] - df.iloc[-1]).abs().sum()/df.iloc[0].sum()
-        remains = -acc
+        remains = float(1-acc)
         
         print(acc)
     
