@@ -13,6 +13,7 @@ import ConfigSpace.hyperparameters as CSH
 from hpbandster.core.worker import Worker
 
 
+
 class BeamWorker(Worker):
    
 
@@ -24,7 +25,6 @@ class BeamWorker(Worker):
         
         Repo='/home/berkeleylab/Repository/beam/'
         Current='/home/berkeleylab/Calib_documentation/TUNE_integrate/TUNE_test'
-
 
         def ext_change(param):
             if param == 'edit':
@@ -79,16 +79,30 @@ class BeamWorker(Worker):
         
         latest_subdir = max(all_subdirs_of(), key=os.path.getmtime)
         df = pd.read_csv(latest_subdir+"/referenceRealizedModeChoice.csv").iloc[[0, -1]].drop(['iterations'], axis=1)
-        acc = (df.iloc[0] - df.iloc[-1]).abs().sum()/df.iloc[0].sum()
-        remains = float(1-acc)
-        
-        print(acc)
-    
-        return({'loss':float(remains),'info':remains})
+        acc = (df.iloc[0] - df.iloc[-1]).abs().sum()
+        remains = float(acc)
+        #print(acc)
 
-        # check keras example
-        # add tag for iteration number and check corresponding column inmode choice csv file
+        # Intermediate iteration stopping
+        df1 = pd.read_csv(latest_subdir+"/referenceRealizedModeChoice.csv").iloc[[0, 3]].drop(['iterations'], axis=1)
+        extrapolated_coeff = {'bike':0,'car':-2,'cav':2,'drive_transit':0,'ride_hail':-4.5, 'ride_hail_pooled':0,'ride_hail_transit':0, 'walk':4, 'walk_transit':1.5}
+        df1 = df1.append(extrapolated_coeff, ignore_index=True)
+        df1.loc['3'] = df1.iloc[1:3].sum()
+        diff = (df1.iloc[0] - df1.iloc[-1]).abs().sum()
+
+        import core.result as hpres
+        log_inf = hpres.logged_results_to_HBS_result('/home/berkeleylab/Calib_documentation/TUNE_integrate/TUNE_test/worker_n_optimizer/')
+        all_runs = log_inf.get_all_runs()
+        config_val = all_runs[-1]['config_id']
+
+        if diff < 20:
+            pass
+        else:
+            print('The config ID to be stopped:',config_val)
     
+        return({'loss':remains,'info':remains})
+
+      
     
     
     
