@@ -10,8 +10,14 @@ import math
 
 import ConfigSpace as CS 
 import ConfigSpace.hyperparameters as CSH
-from hpbandster.core.worker import Worker
 
+import sys
+sys.path.insert(1, '/home/berkeleylab/Misc_code/HpBandSter/hpbandster')
+
+from core.worker import Worker
+
+import psutil
+import threading
 
 
 class BeamWorker(Worker):
@@ -22,6 +28,24 @@ class BeamWorker(Worker):
         self.sleep_interval = sleep_interval
 
     def compute(self, config, budget, **kwargs):
+
+
+        ###########################################
+        '''
+        INFO about config_id:
+             a triplet of ints that uniquely identifies a configuration. the convention is 
+             id = (iteration, budget index, running index) with the following meaning:  
+                - iteration: the iteration of the optimization algorithms. E.g, for Hyperband that is one round of Successive Halving  
+                - budget index: the budget (of the current iteration) for which this configuration was sampled by the optimizer. 
+                    This is only nonzero if the majority of the runs fail and Hyperband resamples to fill empty slots, or you use a more ‘advanced’ optimizer. 
+                - running index: this is simply an int >= 0 that sort the configs into the order they where sampled, i.e. (x,x,0) was sampled before (x,x,1).
+
+        '''
+        ###########################################
+
+        ##### TODO_1: extract the config_id from bohb.run part in the jupyter notebook
+        ###### TODO_2: check hpbandster example 3 to understand the way multi proc and example 4 to see how cluster is implemented
+
         
         Repo='/home/berkeleylab/Repository/beam/'
         Current='/home/berkeleylab/Calib_documentation/TUNE_integrate/TUNE_test'
@@ -65,7 +89,9 @@ class BeamWorker(Worker):
                     
         def run_beam():
             os.chdir(Repo)
-            subprocess.call([Repo+'runme.sh'])
+            
+            subprocess.call([Repo+'run_process.sh'])
+
             os.chdir(Current)
             
         run_beam()
@@ -83,29 +109,67 @@ class BeamWorker(Worker):
         remains = float(acc)
         #print(acc)
 
+        '''
+        ##############################################################################
+
         # Intermediate iteration stopping
         df1 = pd.read_csv(latest_subdir+"/referenceRealizedModeChoice.csv").iloc[[0, 3]].drop(['iterations'], axis=1)
         extrapolated_coeff = {'bike':0,'car':-2,'cav':2,'drive_transit':0,'ride_hail':-4.5, 'ride_hail_pooled':0,'ride_hail_transit':0, 'walk':4, 'walk_transit':1.5}
         df1 = df1.append(extrapolated_coeff, ignore_index=True)
         df1.loc['3'] = df1.iloc[1:3].sum()
         diff = (df1.iloc[0] - df1.iloc[-1]).abs().sum()
+        remains1 = float(diff)
 
         import core.result as hpres
         log_inf = hpres.logged_results_to_HBS_result('/home/berkeleylab/Calib_documentation/TUNE_integrate/TUNE_test/worker_n_optimizer/')
         all_runs = log_inf.get_all_runs()
-        config_val = all_runs[-1]['config_id']
+        jobid_val = all_runs[-1]['config_id']
 
-        if diff < 20:
-            pass
+       
+        if diff < 120:
+
+            thread_to_retain = threading.get_ident()
+
+            
+            #with open('pid_list_retain.txt', 'a') as pid_r_file:
+                #pid_r_file.write(str(id_to_retain)+'\n')
+                
+            
+
+            print('Error is below threshold of ',str(diff),' at jobid ', str(jobid_val), ' on thread ',str(thread_to_retain))
+            
         else:
-            print('The config ID to be stopped:',config_val)
-    
-        return({'loss':remains,'info':remains})
+            
+            thread_to_kill = threading.get_ident()
+            
+            
+            
 
-      
-    
-    
-    
+            #with open('pid_list_kill.txt', 'a') as pid_file:
+                #pid_file.write(str(id_to_kill)+'\n')
+
+            try:
+                os.kill(id_to_kill, 0)
+                p.kill()
+                print("Was forced kill")
+            except OSError as e:
+                print("Was terminated easily")   
+                
+            p = psutil.Process(id_to_kill)
+            p.suspend()         
+                       
+
+            print('Error is above threshold (120) and difference is ',str(diff),' for jobid ',str(jobid_val),'Worst performing config from extrapolated prediction is with thread identification ',str(thread_to_kill))
+            
+
+        
+        ################################################################################  
+        '''                  
+                
+        return({'loss':remains,'info':remains}) 
+
+       
+
 
     @staticmethod
     def get_configspace():
