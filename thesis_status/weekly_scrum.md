@@ -77,10 +77,10 @@
  
 + [COMPLETED for Beamville] Parallel Bayesian, HyperBand, and BEAM interation_stopper implementaion 
 + Tasks:
-    + Modularize the code
-    + Run sf light
+    + Modularize the code [COMPLETED for simulation selection]
+    + Run sf light on AWS
     + Compare against nonearly stopping
-    + Pictorial representation of the whole algorithm
+    + Pictorial representation of the whole algorithm [COMPLETED]
 
 ## Week 06
  
