@@ -92,17 +92,42 @@
     + run urbansim-10k ~100 times 15 iterations to build a database without early stop 
     + start building and test different regression models, verify with cross validation mean squared error 
     + with above step, determine how regression generalizes, if it is linear or nonlinear
-    
     + test my code on urbansim-10k with early stop for 8 workers, 20 beam iterations, 10 bayesian iterations 
     + ETA for this setting should be approx. 6 - 8 hrs or more (?)
-
  
-TBD 
 
 ## Week 07
  
 TBD 
 
 ## Week 08
+ 
+TBD 
+
+## Week 09
+ 
+TBD 
+
+## Week 10
+ 
+TBD 
+
+## Week 11
+ 
+TBD 
+
+## Week 12
+ 
+TBD 
+
+## Week 13
+ 
+TBD 
+
+## Week 14
+ 
+TBD 
+
+## Week 15
  
 TBD 
