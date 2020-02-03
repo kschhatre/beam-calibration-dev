@@ -78,11 +78,24 @@
 + [COMPLETED for Beamville] Parallel Bayesian, HyperBand, and BEAM interation_stopper implementaion 
 + Tasks:
     + Modularize the code [COMPLETED for simulation selection]
-    + Run sf light on AWS
-    + Compare against nonearly stopping
+    + Run sf light on AWS [Ongoing]
+    + Compare against nonearly stopping [Not started]
     + Pictorial representation of the whole algorithm [COMPLETED]
 
 ## Week 06
+
++ Available info and resources:
+    + 1 run of urbansim-10k for 20 iteration
+    + aws (1 x m5a medium) and (1 x m5a large) machine
+    + my code doing: bayesian and early stop (based on hard-coded future mode choice iteration values)
++ To do:
+    + run urbansim-10k ~100 times 15 iterations to build a database without early stop 
+    + start building and test different regression models, verify with cross validation mean squared error 
+    + with above step, determine how regression generalizes, if it is linear or nonlinear
+    
+    + test my code on urbansim-10k with early stop for 8 workers, 20 beam iterations, 10 bayesian iterations 
+    + ETA for this setting should be approx. 6 - 8 hrs or more (?)
+
  
 TBD 
 

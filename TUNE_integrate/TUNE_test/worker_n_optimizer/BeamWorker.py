@@ -35,6 +35,8 @@ class BeamWorker(Worker):
 
         # sf light on AWS
         # comparison vs nonearly stopping
+        # create test cases and tackle them as passed
+        # create a regression linear/ curvilinear function to capture the intercepts evolution
         
         Repo='/home/berkeleylab/Repository/beam/'
         Current='/home/berkeleylab/Calib_documentation/TUNE_integrate/TUNE_test'
