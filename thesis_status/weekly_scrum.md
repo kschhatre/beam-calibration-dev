@@ -94,6 +94,11 @@
     + with above step, determine how regression generalizes, if it is linear or nonlinear
     + test my code on urbansim-10k with early stop for 8 workers, 20 beam iterations, 10 bayesian iterations 
     + ETA for this setting should be approx. 6 - 8 hrs or more (?)
+    + ----------
+    + complete script : result anaylsis for post processing and displaying the configs along with errs
+    + run data collection task on small machine
+    + test scp to and fro kali-aws
+    + create new clean repo on github
  
 
 ## Week 07
